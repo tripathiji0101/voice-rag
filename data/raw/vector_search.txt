@@ -1,0 +1,9 @@
+Vector search finds items by comparing numerical embeddings instead of matching exact keywords.
+Each document or chunk is converted into a high-dimensional vector using an embedding model.
+A query is embedded the same way, and the search returns the vectors closest to it by cosine similarity or dot product.
+This lets a search system match on meaning rather than exact wording, so a question phrased differently from the source text can still find the right passage.
+Vector stores range from simple in-memory arrays for small corpora to specialized databases like FAISS, Qdrant, or pgvector for large-scale production workloads.
+
+Retrieval quality depends heavily on how source documents are split into chunks before embedding.
+Chunks that are too large dilute the embedding with unrelated content, while chunks that are too small lose surrounding context.
+Overlap between consecutive chunks helps preserve context across chunk boundaries so a fact split near a boundary is still retrievable.

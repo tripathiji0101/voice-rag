@@ -1,9 +1,37 @@
+# Web API
 fastapi
 uvicorn[standard]
+
+# Configuration / validation
 pydantic
 pydantic-settings
 python-dotenv
+
+# HTTP
 httpx
+
+# Data / numerical
 numpy
 pandas
+
+# Embeddings / vector search
 fastembed
+
+# LLM
+google-genai
+
+# Speech-to-text
+deepgram-sdk
+
+# Retries
+tenacity
+
+# Testing
+pytest
+pytest-asyncio
+
+# Multipart file uploads
+python-multipart
+
+
+

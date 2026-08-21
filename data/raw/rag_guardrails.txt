@@ -1,0 +1,5 @@
+Retrieval-augmented generation combines a retrieval step with a language model generation step so answers are grounded in retrieved evidence rather than the model's parametric memory alone.
+A naive RAG pipeline still lets the language model answer even when retrieval returns weak or irrelevant matches, which produces confident-sounding but ungrounded answers.
+Guardrails address this by checking retrieval quality before generation, for example by requiring the top similarity score to clear a minimum threshold.
+When no chunk clears the threshold, the system should decline to answer or say it does not have enough information, instead of letting the language model fill the gap with a guess.
+Latency budgets matter for voice interfaces because users expect a response within a few hundred milliseconds after they stop speaking, so retrieval and guardrail checks are usually kept local and network calls are minimized or run in parallel where possible.
